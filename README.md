@@ -58,3 +58,17 @@ docker-compose up --build
 │   ├── init.sql
 │── docker-compose.yml
 │── README.md
+```
+
+---
+
+## 🔧 Database Optimization
+
+To enhance query performance, an index has been added in the init.sql file:
+
+```sh
+CREATE INDEX idx_slots_booked_start_date_end_date_sales_manager_id
+ON slots (booked, start_date, end_date, sales_manager_id);
+```
+
+This index optimizes queries filtering by booking status, date range, and sales manager, ensuring faster retrieval of available appointment slots.
