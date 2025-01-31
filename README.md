@@ -32,6 +32,27 @@ docker-compose up --build
 
 ## 📌 Project Structure
 ```
-/AppointmentBooking
+/Appointments
 │── /src
-│   ├── /Appointments.W
+│   ├── /Appointments.WebAPI            
+│   │   ├── /Application
+│   │   │   ├── /Services
+│   │   │   ├── /Validators
+│   │   ├── /Database
+│   │   │   ├── /Configurations
+│   │   │   ├── ApplicationDbContext.cs
+│   │   ├── /Models
+│   │   │   ├── /DTOs
+│   │   │   ├── /Entities
+│   │   ├── /Web
+│   │   │   ├── /Controllers 
+│   │   │   ├── /Converters
+│   │   ├── appsettings.json
+│   │   ├── Program.cs
+│   │   ├── Startup.cs
+|   ├── /Appointments.Tests
+│── /database
+│   ├── Dockerfile
+│   ├── init.sql
+│── docker-compose.yml
+│── README.md

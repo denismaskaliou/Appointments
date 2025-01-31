@@ -1,7 +1,7 @@
 using Appointments.WebAPI.Application.Services;
 using Appointments.WebAPI.Application.Validators;
 using Appointments.WebAPI.Database;
-using Appointments.WebAPI.Web.Infrastructure;
+using Appointments.WebAPI.Web.Converters;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 

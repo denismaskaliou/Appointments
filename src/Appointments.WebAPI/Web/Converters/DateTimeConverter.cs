@@ -1,7 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Appointments.WebAPI.Web.Infrastructure;
+namespace Appointments.WebAPI.Web.Converters;
 
 public class DateTimeConverter : JsonConverter<DateTime>
 {
