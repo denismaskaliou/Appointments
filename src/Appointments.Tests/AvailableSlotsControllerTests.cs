@@ -12,12 +12,12 @@ namespace Appointments.Tests;
 public class AvailableSlotsControllerTests
 {
     private readonly AvailableSlotsController _controller;
-    private readonly Mock<IAppointmentsSlotsService> _mockService;
+    private readonly Mock<IAppointmentSlotsService> _mockService;
     private readonly Mock<IValidator<AvailableSlotsQueryDto>> _mockValidator;
 
     public AvailableSlotsControllerTests()
     {
-        _mockService = new Mock<IAppointmentsSlotsService>();
+        _mockService = new Mock<IAppointmentSlotsService>();
         _mockValidator = new Mock<IValidator<AvailableSlotsQueryDto>>();
         var mockLogger = new Mock<ILogger<AvailableSlotsController>>();
 

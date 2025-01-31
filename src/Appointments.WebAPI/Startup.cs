@@ -17,7 +17,7 @@ public class Startup(IConfiguration configuration)
                 options.JsonSerializerOptions.Converters.Add(new DateTimeConverter())
             );
 
-        services.AddScoped<IAppointmentsSlotsService, AppointmentsSlotsService>();
+        services.AddScoped<IAppointmentSlotsService, AppointmentSlotsService>();
         services.AddValidatorsFromAssemblyContaining<AvailableSlotsQueryDtoValidator>();
         services.AddDbContext<ApplicationDbContext>((options) =>
         {

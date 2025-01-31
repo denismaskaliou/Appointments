@@ -2,7 +2,7 @@ using Appointments.WebAPI.Models.DTOs;
 
 namespace Appointments.WebAPI.Application.Services;
 
-public interface IAppointmentsSlotsService
+public interface IAppointmentSlotsService
 {
     Task<AvailableSlotDto[]> GetAvailableSlotsAsync(AvailableSlotsQueryDto query);
 }

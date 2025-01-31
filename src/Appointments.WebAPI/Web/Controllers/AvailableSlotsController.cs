@@ -11,7 +11,7 @@ namespace Appointments.WebAPI.Web.Controllers;
 public class AvailableSlotsController(
     ILogger<AvailableSlotsController> logger,
     IValidator<AvailableSlotsQueryDto> validator,
-    IAppointmentsSlotsService appointmentsSlotsService) : ControllerBase
+    IAppointmentSlotsService appointmentSlotsService) : ControllerBase
 {
     [HttpPost("query")]
     public async Task<ActionResult<AvailableSlotDto[]>> GetAvailableSlotsAsync(AvailableSlotsQueryDto query)
@@ -24,7 +24,7 @@ public class AvailableSlotsController(
 
         try
         {
-            var availableSlots = await appointmentsSlotsService.GetAvailableSlotsAsync(query);
+            var availableSlots = await appointmentSlotsService.GetAvailableSlotsAsync(query);
             return Ok(availableSlots);
         }
         catch (Exception ex)
