@@ -14,6 +14,8 @@ create table if not exists slots (
     sales_manager_id int not null references sales_managers(Id)
 );
 
+create index idx_slots_booked_start_date_end_date_sales_manager_id on slots (booked, start_date, end_date, sales_manager_id);
+
 insert into sales_managers (name, languages, products, customer_ratings) values ('Seller 1', '{"German"}', '{"SolarPanels"}', '{"Bronze"}');
 insert into sales_managers (name, languages, products, customer_ratings) values ('Seller 2', '{"German", "English"}', '{"SolarPanels", "Heatpumps"}', '{"Gold","Silver","Bronze"}');
 insert into sales_managers (name, languages, products, customer_ratings) values ('Seller 3', '{"German", "English"}', '{"Heatpumps"}', '{"Gold","Silver","Bronze"}');
