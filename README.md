@@ -51,6 +51,8 @@ docker-compose up --build
 │   │   ├── Program.cs
 │   │   ├── Startup.cs
 |   ├── /Appointments.Tests
+|   |── Appointments.sln
+|   ├── Dockerfile
 │── /database
 │   ├── Dockerfile
 │   ├── init.sql
