@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  db:
+    build: ./database
+    container_name: appointments-db
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mypassword123!
+      POSTGRES_DB: coding-challenge
+    volumes:
+      - db_volume:/var/lib/postgresql/data
+
+  api:
+    build: ./src
+    container_name: appointments-api
+    restart: always
+    ports:
+      - "3000:8080"
+    depends_on:
+      - db
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Database=coding-challenge;Username=postgres;Password=mypassword123!
+
+volumes:
+  db_volume:
